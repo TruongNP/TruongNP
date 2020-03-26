@@ -1,0 +1,160 @@
+
+{%- include 'template-banner'
+  bg: section.settings.image,
+  heights: section.settings.height,
+  units: section.settings.unit,
+  positions: section.settings.position,
+  repeats: section.settings.repeat,
+  sizes: section.settings.size,
+  justify_content: section.settings.justify-content,
+  align_item: section.settings.align-item-content,
+  title_text_align: section.settings.title-text-align,
+  title: section.settings.title,
+  title_color: section.settings.title-color,
+  content_text_align: section.settings.content-text-align,
+  content_text: section.settings.content-text,
+  text_color: section.settings.text-color,
+  class: section.settings.class
+-%}
+<style>
+  
+</style>
+
+{% schema %}
+{
+  "name": "Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id"  : "image",
+      "label" : "Banner"
+    },
+    {
+      "type":      "radio",
+      "id":        "unit",
+      "label":     "Unit",
+      "options": [
+        { "value": "px", "label": "px" },
+        { "value": "%", "label": "%" },
+        { "value": "vh", "label": "vh" }
+      ],
+      "default":   "px"
+    },
+    {
+      "type":      "text",
+      "id":        "height",
+      "label":     "Height",
+      "default":   "500"
+    },
+    {
+      "type": "select",
+      "id": "position",
+      "label": "Position",
+      "options": [
+         { "value": "top left", "label": "Top Left"},
+         { "value": "top right", "label": "Top Right"},
+         { "value": "center", "label": "Center"},
+         { "value": "bottom left", "label": "Bottom Left"},
+         { "value": "bottom right", "label": "Bottom Right"}
+      ],
+      "default":   "center"
+    },
+    {
+      "type": "select",
+      "id": "repeat",
+      "label": "Repeat",
+      "options": [
+         { "value": "no-repeat", "label": "No Repeat"},
+         { "value": "repeat", "label": "Repeat"}
+      ],
+      "default":   "no-repeat"
+    },
+    {
+      "type": "select",
+      "id": "size",
+      "label": "Size",
+      "options": [
+         { "value": "auto", "label": "Auto"},
+         { "value": "cover", "label": "Cover"},
+         { "value": "contain", "label": "Contain"}
+      ],
+      "default":   "cover"
+    },
+    {
+      "type": "select",
+      "id": "justify-content",
+      "label": "Horizontal",
+      "options": [
+         { "value": "justify-content-start", "label": "Start"},
+         { "value": "justify-content-center", "label": "Center"},
+         { "value": "justify-content-end", "label": "End"}
+      ],
+      "default":   "justify-content-center"
+    },
+    {
+      "type": "select",
+      "id": "align-item-content",
+      "label": "Vertically",
+      "options": [
+         { "value": "align-items-start", "label": "Start"},
+         { "value": "align-items-center", "label": "Center"},
+         { "value": "align-items-end", "label": "End"}
+      ],
+      "default":   "align-items-center"
+    },
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Heading",
+      "default": "Text heading"
+    },
+    {
+      "type": "select",
+      "id": "title-text-align",
+      "label": "Align",
+      "options": [
+         { "value": "text-center", "label": "Center"},
+         { "value": "text-left", "label": "Left"},
+         { "value": "text-right", "label": "Right"}
+      ],
+      "default":   "text-center"
+    },
+    {
+      "id": "title-color",
+      "type": "color",
+      "label": "Title color",
+      "default": "#fff"
+    },
+    {
+      "id": "content-text",
+      "type": "html",
+      "label": "Message",
+      "default": "Text content"
+    },
+    {
+      "type": "select",
+      "id": "content-text-align",
+      "label": "Align",
+      "options": [
+         { "value": "text-center", "label": "Center"},
+         { "value": "text-left", "label": "Left"},
+         { "value": "text-right", "label": "Right"}
+      ],
+      "default":   "text-center"
+    },
+    {
+      "id": "text-color",
+      "type": "color",
+      "label": "Text color",
+      "default": "#fff"
+    },
+    {
+      "id": "class",
+      "type": "text",
+      "label": "Add class"
+    }
+    
+  ]
+}
+{% endschema %}
+
