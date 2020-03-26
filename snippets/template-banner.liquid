@@ -1,0 +1,15 @@
+<div class="page-width--flush section-banner {{ class }} d-flex {{ justify_content }} {{ align_item }}" style="
+    background-image: url('{{ bg | img_url:'master' }}');
+    height: {{ heights }}{{- units }};
+    background-position: {{ positions }};
+    background-repeat: {{ repeats }};
+    background-size: {{ sizes }};
+">
+    <div class="banner">
+        <h3 class="title {{ title_text_align }}" style="color:{{ title_color }};">{{ title }}</h3>
+        <p class="content-text {{ content_text_align }}" style="color: {{ text_color }};">{{ content_text }}</p>
+    </div>
+</div>
+
+<style>
+</style>
